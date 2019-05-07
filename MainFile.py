@@ -20,12 +20,13 @@ def conditional_test(many):
         b_ = list(combinations)
         b_.remove(i)
         for j in b_:
+            sum_i = sum(i)
+            sum_j = sum(j)
+            len_set_i = len(list(i))
+            len_set_j = len(list(j))
+
             set_i = set(i)
             set_j = set(j)
-            sum_i = sum(list(set_i))
-            sum_j = sum(list(set_j))
-            len_set_i = len(list(set_i))
-            len_set_j = len(list(set_j))
 
             # определяем непересекающиеся подмножества и проводим над ними проверку по условию
             if set_i.isdisjoint(set_j):
